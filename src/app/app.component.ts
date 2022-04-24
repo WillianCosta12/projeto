@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Element } from '@angular/compiler';
+import { Component, Input } from '@angular/core';
+import { TabComponent} from './components/tab/tab.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projeto';
+
 }
