@@ -1,10 +1,20 @@
-<div class="Tabs">
-    
-    <div [ngSwitch]="state">
-        <span *ngSwitchCase="'Tab-01'">{{tabTexts[0]}}</span>
-        <span *ngSwitchCase="'Tab-02'">{{tabTexts[1]}}</span>
-        <span *ngSwitchCase="'Tab-03'">{{tabTexts[2]}}</span>
-        <span *ngSwitchCase="'Tab-04'">{{tabTexts[3]}}</span>
+<div class="contents">
+
+    <div class="nav">
+        <div class="button-list">
+            <button (click)="onClick('Tab-01')">{{ids[0]}}</button>
+            <button (click)="onClick('Tab-02')">{{ids[1]}}</button>
+            <button (click)="onClick('Tab-03')">{{ids[2]}}</button>
+            <button (click)="onClick('Tab-04')">{{ids[3]}}</button>
+        </div>
+    </div>
+    <div class="outlet">
+        <div [ngSwitch]="state">
+            <span *ngSwitchCase="'Tab-01'">{{contents[0]}}</span>
+            <span *ngSwitchCase="'Tab-02'">{{contents[1]}}</span>
+            <span *ngSwitchCase="'Tab-03'">{{contents[2]}}</span>
+            <span *ngSwitchCase="'Tab-04'">{{contents[3]}}</span>
+        </div>
     </div>
 </div>
 

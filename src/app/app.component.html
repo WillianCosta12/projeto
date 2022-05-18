@@ -1,16 +1,6 @@
 
 <div class="App">
     <div class="main">
-        <div class="nav">
-            <div class="button-list">
-                <button (click)="tab.onClick('Tab-01')">Tab-01</button>
-                <button (click)="tab.onClick('Tab-02')">Tab-02</button>
-                <button (click)="tab.onClick('Tab-03')">Tab-03</button>
-                <button (click)="tab.onClick('Tab-04')">Tab-04</button>
-            </div>
-        </div>
-        <div class="outlet">
-            <app-tab #tab></app-tab>
-        </div>
+        <app-tab [ids]="ids" [contents]="contents"></app-tab>
     </div>
 </div>

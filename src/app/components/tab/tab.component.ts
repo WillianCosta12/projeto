@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Tab } from 'src/app/Tab'
 
 @Component({
   selector: 'app-tab',
@@ -9,14 +10,12 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class TabComponent implements OnInit {
 
-  tabTexts = [
-    'Esse é o texto do Tab-01',
-    'Esse é o texto do Tab-02',
-    'Esse é o texto do Tab-03',
-    'Esse é o texto do Tab-04'
-  ]
+  @Input()
+  ids: Array<String> = [];
+  @Input()
+  contents: Array<String> = [];
 
-  @Input() state = 'Tab-01';
+  @Input() state = 'Tab-01'; //Exportando do dado para um Pai
 
   @Input() onClick(id:string){
     this.state = id;
